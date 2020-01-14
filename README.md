@@ -1,0 +1,1 @@
+# how-to-configure-allure-gradle-plugin
