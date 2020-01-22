@@ -14,6 +14,26 @@
 
 # Selenide, TestNG, ReportPotal Example
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [**Environment**](#environment)
+- [**Frameworks/Libraries**](#frameworkslibraries)
+- [**How To Use**](#how-to-use)
+  - [**Clone Repository**](#clone-repository)
+  - [**Configuration Files**](#configuration-files)
+  - [**Deploy ReportPortal With Docker**](#deploy-reportportal-with-docker)
+    - [**Install Docker, Docker Machine**](#install-docker-docker-machine)
+    - [**Deploy ReportPortal**](#deploy-reportportal)
+    - [**Setup ReportPortal UI**](#setup-reportportal-ui)
+  - [**Run Tests With Gradle**](#run-tests-with-gradle)
+    - [**Perform On Browsers**](#perform-on-browsers)
+    - [**Filter Tests**](#filter-tests)
+  - [**ReportPortal Results**](#reportportal-results)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## **Environment**
 > **Platform**: <em>macOS Mojave</em><br/>
 > **IDE**: <em>IntelliJ IDEA 2019.3.1 (Community Edition)</em><br/>
@@ -132,7 +152,7 @@ You can filter tests by using option `--tests`<br/>
 Giving values can be `TestPackage`, `TestClass`, `TestMethod`
 > `./gradlew clean test -Dselenide.browser=firefox --tests ExampleTest.homePageTest`
 
-#### **ReportPortal Results**
+### **ReportPortal Results**
 See test results as launches in URL http://192.168.1.5:8080/ui/#selenide-testng-reportportal-example/launches/all
 ![](images/launches.png?raw=true)
 
