@@ -109,7 +109,7 @@ tasks.withType(Test) {
         /*
         * Set TestNG output dir
         */
-        outputDirectory = file('$projectDir/testngOutput')
+        outputDirectory = file('build/testngOutput')
 
         //includeGroups 'unitTests'
         //excludeGroups 'integrationTests'
