@@ -6,6 +6,8 @@ group group
 version version
 
 apply plugin: 'java'
+apply plugin: 'idea'    // Optional using for IntelliJ IDEA
+apply plugin: 'eclipse' // Optional using for Eclipse
 
 [compileJava, compileTestJava]*.sourceCompatibility = 1.8
 [compileJava, compileTestJava]*.targetCompatibility = 1.8
