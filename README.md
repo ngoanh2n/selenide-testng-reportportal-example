@@ -42,7 +42,7 @@
 > **Docker**: <em>19.03.5</em><br/>
 
 ## **Frameworks/Libraries**
-> **Selenide**: <em>5.6.0 - Web Driver</em><br/>
+> **Selenide**: <em>5.6.1 - Web Driver</em><br/>
 > **TestNG**: <em>7.1.0 - Testing Framework</em><br/>
 > **ReportPortal UI**: <em>5.0 - Reporting Engine Service</em><br/>
 > **ReportPortal Java Agent**: <em>4.2.0 - Reporting Engine Agent for TestNG</em><br/>
