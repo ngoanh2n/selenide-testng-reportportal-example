@@ -20,6 +20,7 @@
 
 - [**Environment**](#environment)
 - [**Frameworks/Libraries**](#frameworkslibraries)
+- [**Project Structure**](#project-structure)
 - [**How To Use**](#how-to-use)
   - [**Clone Repository**](#clone-repository)
   - [**Configuration Files**](#configuration-files)
@@ -46,6 +47,41 @@
 > **TestNG**: <em>7.1.0 - Testing Framework</em><br/>
 > **ReportPortal UI**: <em>5.0 - Reporting Engine Service</em><br/>
 > **ReportPortal Java Agent**: <em>4.2.0 - Reporting Engine Agent for TestNG</em><br/>
+
+## **Project Structure**
+```
+├── gradle
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── images
+│   └── **/*.png
+├── src/test
+│   ├── java/com/github/ngoanh2n
+│   │   ├── common
+│   │   │   ├── BasePage.java
+│   │   │   └── BaseTest.java
+│   │   ├── components
+│   │   │   └── NavigationBar.java
+│   │   ├── pages
+│   │   │   ├── HomePage.java
+│   │   │   └── LoginPage.java
+│   │   └── scenarios
+│   │       └── ExampleTest.java
+│   └── resources
+│       ├── log4j.properties
+│       ├── reportportal.properties
+│       └── selenide.properties
+├── .gitignore
+├── LICENSE
+├── README.md
+├── build.gradle
+├── docker-compose.yml
+├── gradle.properties
+├── gradlew
+├── gradlew.bat
+└── settings.gradle
+```
 
 ## **How To Use**
 ### **Clone Repository**
@@ -155,5 +191,3 @@ Giving values can be `TestPackage`, `TestClass`, `TestMethod`
 ### **ReportPortal Results**
 See test results as launches in URL http://192.168.1.5:8080/ui/#selenide-testng-reportportal-example/launches/all
 ![](images/launches.png?raw=true)
-
-
