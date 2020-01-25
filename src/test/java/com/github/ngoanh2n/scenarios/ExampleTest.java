@@ -4,7 +4,7 @@ import com.github.ngoanh2n.common.BaseTest;
 import org.testng.annotations.Test;
 
 /**
- * BaseTest class
+ * ExampleTest class
  * <br/>
  *
  * @author ngoanh2n@gmail.com (Ho Huu Ngoan)

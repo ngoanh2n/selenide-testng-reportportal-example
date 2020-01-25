@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Selenide.$;
  * @author ngoanh2n@gmail.com (Ho Huu Ngoan)
  */
 
-public class NavigationBar<Page> extends BasePage<Page> {
+public abstract class NavigationBar<Page> extends BasePage<Page> {
 
     public LoginPage logout() {
         SelenideElement profileDropdown = $("a[href='/anonymous.automation']");

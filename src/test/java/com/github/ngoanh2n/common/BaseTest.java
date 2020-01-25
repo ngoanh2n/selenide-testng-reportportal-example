@@ -24,7 +24,7 @@ import static java.lang.invoke.MethodHandles.lookup;
  */
 
 @Listeners({ReportPortalTestNGListener.class})
-public class BaseTest {
+public abstract class BaseTest {
 
     private final static Logger logger = LoggerFactory.getLogger(lookup().lookupClass());
     private final static String selenideProperties = "selenide.properties";
