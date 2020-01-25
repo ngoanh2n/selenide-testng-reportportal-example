@@ -38,7 +38,7 @@
 > **Platform**: <em>macOS Mojave</em><br/>
 > **IDE**: <em>IntelliJ IDEA 2019.3.1 (Community Edition)</em><br/>
 > **Java**: <em>1.8.0_211</em><br/>
-> **Gradle**: <em>6.0.1</em><br/>
+> **Gradle**: <em>6.1.1</em><br/>
 > **Docker**: <em>19.03.5</em><br/>
 
 ## **Frameworks/Libraries**
