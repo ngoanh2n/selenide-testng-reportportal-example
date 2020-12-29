@@ -1,18 +1,9 @@
-[![Twitter Follow](https://img.shields.io/twitter/follow/ngoanh2n.svg?style=social)](https://twitter.com/ngoanh2n)
-[![GitHub followers](https://img.shields.io/github/followers/ngoanh2n.svg?style=social&label=Follow&maxAge=2592000)](https://github.com/ngoanh2n?tab=followers)
-[![GitHub forks](https://img.shields.io/github/forks/ngoanh2n/selenide-testng-reportportal-example.svg?style=social&label=Fork&maxAge=2592000)](https://github.com/ngoanh2n/selenide-testng-reportportal-example/network/members/)
 [![GitHub stars](https://img.shields.io/github/stars/ngoanh2n/selenide-testng-reportportal-example.svg?style=social&label=Star&maxAge=2592000)](https://github.com/ngoanh2n/selenide-testng-reportportal-example/stargazers/)
 [![GitHub watchers](https://img.shields.io/github/watchers/ngoanh2n/selenide-testng-reportportal-example.svg?style=social&label=Watch&maxAge=2592000)](https://github.com/ngoanh2n/selenide-testng-reportportal-example/watchers/)
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-blueviolet.svg)](https://opensource.org/licenses/MIT)
-[![badge-jdk](https://img.shields.io/badge/jdk-8-blue.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+[![GitHub forks](https://img.shields.io/github/forks/ngoanh2n/selenide-testng-reportportal-example.svg?style=social&label=Fork&maxAge=2592000)](https://github.com/ngoanh2n/selenide-testng-reportportal-example/network/members/)
 
 # Selenide, TestNG, ReportPotal Example
-
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
+**Table of Contents**
 - [**Environment**](#environment)
 - [**Frameworks/Libraries**](#frameworkslibraries)
 - [**Project Structure**](#project-structure)
@@ -27,8 +18,6 @@
     - [**Perform On Browsers**](#perform-on-browsers)
     - [**Filter Tests**](#filter-tests)
   - [**ReportPortal Results**](#reportportal-results)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## **Environment**
 > **Platform**: <em>macOS Mojave</em><br/>
