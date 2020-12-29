@@ -1,25 +1,36 @@
 /**
- * @author ngoanh2n@gmail.com (Ho Huu Ngoan)
+ * https://github.com/ngoanh2n/selenide-testng-reportportal-example
+ * @author Ho Huu Ngoan (ngoanh2n@gmail.com)
+ * @since 1.0.0
  */
+group(property("group"))
+version(property("version"))
 
-group group
-version version
+apply plugin: "java"
+apply plugin: "idea"    // Optional using for IntelliJ IDEA
+apply plugin: "eclipse" // Optional using for Eclipse
 
-apply plugin: 'java'
-apply plugin: 'idea'    // Optional using for IntelliJ IDEA
-apply plugin: 'eclipse' // Optional using for Eclipse
+ext {
+    ENCODING                            = "UTF-8"
+    SELENIUM_VERSION                    = "3.141.59"
+    SELENIDE_VERSION                    = "5.17.0"
+    APPIUM_VERSION                      = "7.4.1"
+    TESTNG_VERSION                      = "7.1.0"
+    SLF4J_VERSION                       = "1.7.30"
+    REPORTPORTAL_AGENT_TESTNG_VERSION   = "5.0.8"
+    REPORTPORTAL_LOGGER_LOG4J_VERSION   = "5.0.3"
+}
 
 [compileJava, compileTestJava]*.sourceCompatibility = 1.8
 [compileJava, compileTestJava]*.targetCompatibility = 1.8
 [compileJava, compileTestJava]*.options.collect { options -> options.debug = true }
-[compileJava, compileTestJava]*.options.collect { options -> options.encoding = 'UTF-8' }
+[compileJava, compileTestJava]*.options.collect { options -> options.encoding = ENCODING }
 
 repositories {
     jcenter()
     mavenCentral()
-    maven {
-        url "https://plugins.gradle.org/m2/"
-    }
+    maven { url "https://plugins.gradle.org/m2/" }
+    maven { url "http://dl.bintray.com/epam/reportportal/" }
 }
 
 dependencies {
@@ -27,52 +38,52 @@ dependencies {
     * Selenium/Selenide
     */
     // https://mvnrepository.com/artifact/com.codeborne/selenide
-    implementation('com.codeborne:selenide:5.6.1')
+    implementation("com.codeborne:selenide:$SELENIDE_VERSION")
 
     // https://mvnrepository.com/artifact/io.appium/java-client
-    implementation('io.appium:java-client:7.2.0')
+    implementation("io.appium:java-client:$APPIUM_VERSION")
 
     // https://mvnrepository.com/artifact/com.codeborne/phantomjsdriver
-    testImplementation('com.codeborne:phantomjsdriver:1.4.4') { transitive = false }
+    testImplementation("com.codeborne:phantomjsdriver:1.4.4") { transitive = false }
 
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/htmlunit-driver
-    testImplementation('org.seleniumhq.selenium:htmlunit-driver:2.36.0')
+    testImplementation("org.seleniumhq.selenium:htmlunit-driver:2.36.0")
 
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-safari-driver
-    testImplementation('org.seleniumhq.selenium:selenium-safari-driver:3.141.59') { transitive = false }
+    testImplementation("org.seleniumhq.selenium:selenium-safari-driver:$SELENIUM_VERSION") { transitive = false }
 
     /*
     * TestNG
     */
     // https://mvnrepository.com/artifact/org.testng/testng
-    testImplementation('org.testng:testng:7.1.0')
+    testImplementation("org.testng:testng:$TESTNG_VERSION")
 
     /*
     * ReportPortal
     */
-    // https://mvnrepository.com/artifact/com.epam.reportportal/agent-java-testng
-    implementation('com.epam.reportportal:agent-java-testng:4.2.0')
+    // https://mvnrepository.com/artifact/com.epam.reportportal/agent-java-testng?repo=epam-reportportal
+    // http://dl.bintray.com/epam/reportportal/com/epam/reportportal/agent-java-testng
+    implementation("com.epam.reportportal:agent-java-testng:$REPORTPORTAL_AGENT_TESTNG_VERSION")
+
+    // https://mvnrepository.com/artifact/com.epam.reportportal/logger-java-log4j?repo=epam-reportportal
+    // http://dl.bintray.com/epam/reportportal/com/epam/reportportal/logger-java-log4j/
+    implementation("com.epam.reportportal:logger-java-log4j:$REPORTPORTAL_LOGGER_LOG4J_VERSION")
 
     /*
      * Logging
      */
     // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
-    implementation('org.slf4j:slf4j-api:1.7.30')
+    implementation("org.slf4j:slf4j-api:$SLF4J_VERSION")
 
     // https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12
-    testImplementation('org.slf4j:slf4j-log4j12:1.7.30')
-
-    // https://mvnrepository.com/artifact/com.epam.reportportal/logger-java-log4j
-    implementation('com.epam.reportportal:logger-java-log4j:4.0.1')
+    testImplementation("org.slf4j:slf4j-log4j12:$SLF4J_VERSION")
 }
 
 buildscript {
     repositories {
         jcenter()
         mavenCentral()
-        maven {
-            url "https://plugins.gradle.org/m2/"
-        }
+        maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
     }
@@ -80,11 +91,10 @@ buildscript {
 
 tasks.withType(Test).all { testTask ->
     testTask.systemProperties = [
-            'file.encoding': 'UTF-8',
-            'BUILD_URL'    : System.getenv()['BUILD_URL']
+            "file.encoding": "UTF-8",
     ]
     testTask.testLogging.showStandardStreams = true
-    testTask.exclude 'com.github.ngoanh2n.pages/**/*'
+    testTask.exclude "com.github.ngoanh2n.pages/**/*"
     testTask.outputs.upToDateWhen { false }
 }
 
@@ -111,7 +121,7 @@ tasks.withType(Test) {
         /*
         * Set TestNG output dir
         */
-        outputDirectory = file('build/testngOutput')
+        outputDirectory = file("build/testngOutput")
 
         //includeGroups 'unitTests'
         //excludeGroups 'integrationTests'
@@ -135,7 +145,7 @@ tasks.withType(Test) {
     /*
     *  Want to display the following test events
     */
-    testLogging { events 'passed', 'skipped', 'failed' }
+    testLogging { events "passed", "skipped", "failed" }
 
     /*
     * To make the Gradle JVM system properties available to tests
