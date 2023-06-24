@@ -95,13 +95,13 @@ You can change values for your case.
   chmod +x /usr/local/bin/docker-machine`<br/>
 
 <em>To check the version type the following command.</em><br/>
-> Ngoans-Mac:~ ngoanh2n`$ docker --version`<br/>
+> Mac:~ ngoanh2n`$ docker --version`<br/>
 > Docker version 19.03.5, build 633a0ea<br/>
 >
-> Ngoans-Mac:~ ngoanh2n`$ docker-compose --version`<br/>
+> Mac:~ ngoanh2n`$ docker-compose --version`<br/>
 > docker-compose version 1.25.2, build 698e2846<br/>
 >
-> Ngoans-Mac:~ ngoanh2n`$ docker-machine --version`<br/>
+> Mac:~ ngoanh2n`$ docker-machine --version`<br/>
 > docker-machine version 0.16.0, build 702c267f<br/>
 
 <em>Start Docker desktop community.</em><br/>
@@ -121,7 +121,7 @@ By the following official instructions [here](https://reportportal.io/docs/Deplo
 
 #### **Setup ReportPortal UI**
 <em>Get current IP on your mac machine (For ethernet in this case). </em><br/>
-> Ngoans-Mac:~ ngoanh2n`$ ipconfig getifaddr en0`<br/>
+> Mac:~ ngoanh2n`$ ipconfig getifaddr en0`<br/>
 > 192.168.1.5<br/>
 
 Open your browser with an IP address of the deployed environment at port 8080. In my case: http://192.168.1.5:8080/ui/#login

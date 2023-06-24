@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
  * LoginPage class
  * <br/>
  *
- * @author ngoanh2n@gmail.com (Ho Huu Ngoan)
+ * @author ngoanh2n
  */
 
 public class LoginPage extends BasePage<LoginPage> {

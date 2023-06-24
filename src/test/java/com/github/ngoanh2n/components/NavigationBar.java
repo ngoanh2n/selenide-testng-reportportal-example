@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.$;
  * HomePage class
  * <br/>
  *
- * @author ngoanh2n@gmail.com (Ho Huu Ngoan)
+ * @author ngoanh2n
  */
 
 public abstract class NavigationBar<Page> extends BasePage<Page> {

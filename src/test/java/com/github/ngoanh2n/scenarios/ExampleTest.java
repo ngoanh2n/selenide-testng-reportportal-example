@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
  * ExampleTest class
  * <br/>
  *
- * @author ngoanh2n@gmail.com (Ho Huu Ngoan)
+ * @author ngoanh2n
  */
 
 public class ExampleTest extends BaseTest {

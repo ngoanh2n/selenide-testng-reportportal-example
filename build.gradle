@@ -1,7 +1,5 @@
 /**
- * https://github.com/ngoanh2n/selenide-testng-reportportal-example
- * @author Ho Huu Ngoan (ngoanh2n@gmail.com)
- * @since 1.0.0
+ * @author ngoanh2n
  */
 group(property("group"))
 version(property("version"))

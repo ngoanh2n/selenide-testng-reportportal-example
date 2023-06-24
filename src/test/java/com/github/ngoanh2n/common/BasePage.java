@@ -15,7 +15,7 @@ import java.io.IOException;
  * BasePage class
  * <br/>
  *
- * @author ngoanh2n@gmail.com (Ho Huu Ngoan)
+ * @author ngoanh2n
  */
 
 @SuppressWarnings({"unchecked", "UnusedReturnValue"})
